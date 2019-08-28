@@ -1,8 +1,10 @@
+
 .tab-button {
     background-color: lightblue;
     border: none;
     padding: 10px;
     margin: 1px;
+    outline: none;  /* remove blue highlight when button is clicked */
 }
 
 .tab-button:hover {
@@ -24,4 +26,3 @@
     border-bottom: 1px solid darkblue;
     padding: 10px;
 }
-
