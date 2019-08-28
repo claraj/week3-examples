@@ -11,30 +11,57 @@
         color: gray;
       }
 
+      input {
+          width: 100%;
+          padding: 5px;
+          margin: 5px 5px 5px 0px;
+          box-sizing: border-box;
+
+      }
+
   </style>
 
 </head>
 <body>
 
+    <h1>Student Club Roster</h1>
+
+    <h2>Add Students</h2>
+
     <form>
-        <input name="student-name" required>
-        <input name="student-id" required>
+        <label for="student-name">Student Name</label><input id="student-name" name="student-name" required>
+        <br>
+        <label for="student-id">Student ID</label><input id="student-id" name="student-id" required>
+        <br>
         <!-- the step attribute controls the difference between acceptable 
         numbers. step="0.1" means that acceptable values are 0, 0.1, 0.2, 0.3 ... -->
-        <input name="student-gpa" type="number" step="0.1" min="0" max="4" required>
+        <label for="student-gpa">Student Name</label><input id="student-gpa" name="student-gpa" type="number" step="0.1" min="0" max="4" required>
+        <br>
         <button id="add-student">Add Student</button>
     </form>
 
 
-    <ul id="student-list">
+    <h2>Student List</h2>
 
+    <p>There are 
+        <span id="student-count">
+          <!-- use JavaScript to count the number of students, and show here -->
+        </span> 
+    students in the club.</p>
+    
+
+    <ul id="student-list">
+        <!-- use JavaScript to create li elements  -->
     </ul>
 
-    <button id="remove-checked-students"></button>
+    <button id="remove-selected-students">Remove selected students</button>
 
 <script>
 
     /* TODO - add this functionality to this page
+
+    When the page loads
+        - Display 0 in the span#student-count
 
     When button#add-students is clicked
         - Read the value from the student-name input
@@ -48,8 +75,9 @@
             When a li element is clicked, add the class="selected" to that li element.
             When a li element is clicked again, remove the class="selected" from that li element
         - Add the new li element to ul#student-list element 
+        - Update the span#student-count value 
 
-    When button#remove-checked-students is clicked, 
+    When button#remove-selected-students is clicked, 
         - remove all of the elements with the class="selected" from the list. 
         
     */
