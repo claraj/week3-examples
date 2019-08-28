@@ -210,7 +210,7 @@ if (newCustomer || !haveEmail) {
 
 console.log('Based on the number of legs a creature has, I will try to guess what it is.')
 
-let legs = 4    /* Pretend this is user input */
+let legs = 4    // Pretend this is user input 
 
 if (legs < 0) {
   console.log('I don\'t think anything has a negative number of legs')
@@ -233,12 +233,8 @@ else if (legs === 6) {
 else if (legs === 8) {
   console.log('Possibly a spider?')
 }
-else if (legs > 8) {
-  console.log('More than 8 legs - perhaps a millipede?')
-}
 else {
-  console.log('This shouldn\'t happen, ' +
-    'but add an else clause anyway to help detect if it does')
+  console.log('More than 8 legs - perhaps a millipede?')
 }
 
 
@@ -279,7 +275,7 @@ for ( let x = 0;  x < 10;  x++) {
 
 let name = "JavaScript"
 for (let letter = 0;  letter < name.length;  letter++) {
-  console.log(name[letter])   // Can refer to characters by string position
+  console.log(name[letter])   // Can refer to characters by string index
 }
 
 
@@ -307,6 +303,7 @@ while (number < maxVal) {
 let letters = ['a', 'b', 'c']
 
 //loop over an array by counting the elements
+// This approach is useful if you need to know where you are in the array
 for (let i = 0; i < letters.length; i++) {
   console.log('Element ' + i + ' is ' + letters[i])
 }
@@ -316,6 +313,7 @@ for (let i = 0; i < letters.length; i++) {
 More concise if you don't need to know the position of the elements
 Notice the function definition in the function call! */
 let animals = ['Buffalo', 'Elephant', 'Yak']
+
 animals.forEach(function(element){
   console.log(element)
 })
