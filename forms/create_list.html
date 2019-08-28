@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create addEventListener</title>
+</head>
+
+<body>
+  <p>Please enter some text to add to the list</p>
+  <input type="text" id="text">
+  <button id="save-to-list">Save</button>
+
+  <ul id="list">
+
+  </ul>
+
+<script>
+
+  let saveButton = document.querySelector('#save-to-list')
+  let textInput = document.querySelector('#text')
+  let list = document.querySelector('#list')
+
+  saveButton.addEventListener('click', function() {
+    let text = textInput.value
+    let listItem = document.createElement('li')
+    listItem.innerHTML = text 
+    list.appendChild(listItem)
+    textInput.value = ''
+  })
+
+</script>
+
+</body>
+
+</html>
+
+</script>
+
+</body>
+</html>
