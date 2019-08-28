@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Club Membership</title>
+
+  <style>
+      
+      .selected {
+        text-decoration: line-through ;
+        font-style: italic;
+        color: gray;
+      }
+
+  </style>
+
+</head>
+<body>
+
+    <form>
+        <input name="student-name" required>
+        <input name="student-id" required>
+        <!-- the step attribute controls the difference between acceptable 
+        numbers. step="0.1" means that acceptable values are 0, 0.1, 0.2, 0.3 ... -->
+        <input name="student-gpa" type="number" step="0.1" min="0" max="4" required>
+        <button id="add-student">Add Student</button>
+    </form>
+
+
+    <ul id="student-list">
+
+    </ul>
+
+    <button id="remove-checked-students"></button>
+
+<script>
+
+    /* TODO - add this functionality to this page
+
+    When button#add-students is clicked
+        - Read the value from the student-name input
+        - Read the value from the student-id input
+        - Read the value from the student-gpa input
+        - Create a new li element
+        - Set the innerHTML to a string containing the student's name, id, and GPA
+            - for example "Beyonce Knowles, id: aa1234bb, GPA 3.8"
+            - Use a template string `this is a template string with data: ${variable}`
+        - Add a click event handler to each li element. 
+            When a li element is clicked, add the class="selected" to that li element.
+            When a li element is clicked again, remove the class="selected" from that li element
+        - Add the new li element to ul#student-list element 
+
+    When button#remove-checked-students is clicked, 
+        - remove all of the elements with the class="selected" from the list. 
+        
+    */
+
+</script>
+
+</body>
+</html>
