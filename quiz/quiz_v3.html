@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quiz</title>
+</head>
+<body>
+
+    <p>What is the capital of Wisconsin?</p>
+
+    <button class="wrong-answer">Bayfield</button>
+    <button id="correct-answer">Madison</button>
+    <button class="wrong-answer">Milwaukee</button>
+
+    <p id="result"></p>
+
+<script>
+
+    // Select the correct answer button by ID
+    let correctAnswerButton = document.querySelector('#correct-answer')
+
+    // Select the result paragraph by ID. This will be used to 
+    // display a 'Correct answer!' message when the user clicks the correct button
+    let result = document.querySelector('#result')
+
+    // Select all of the wrong-answer buttons
+    let wrongAnswerButtons = document.querySelectorAll('.wrong-answer')
+    wrongAnswerButtons.forEach( function(wrongAnswerButton) {
+      // Add an event listener to each button
+      wrongAnswerButton.addEventListener('click', function() {
+        result.innerHTML = 'Wrong answer, try again?'
+        correctAnswerButton.style.background = 'white'  
+      })
+    })
+
+    correctAnswerButton.addEventListener('click', function() {
+      result.innerHTML = 'Correct answer!'
+      correctAnswerButton.style.background = 'cyan'
+    })
+  
+</script>
+
+</body>
+</html>
