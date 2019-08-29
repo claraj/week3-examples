@@ -43,7 +43,7 @@
       // What is the data-content-id value for the button clicked?
       let contentId = this.getAttribute('data-content-id')
       
-      //show the tab content with this id 
+      // select and show the tab content with this id 
       let tabContent = document.querySelector('#' + contentId)
       tabContent.style.display = 'block'
 
@@ -58,8 +58,9 @@
     })
   })
 
-  // Show the first tab by default 
+  // Show the first tab, so it's visible when page loads 
   tabContents[0].style.display = 'block'
+
   // And make the first button active 
   buttons[0].classList.add('active')
 
