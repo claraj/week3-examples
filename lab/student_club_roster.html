@@ -28,18 +28,13 @@
 
     <h2>Add Students</h2>
 
-    <form onsubmit="event.preventDefault()">
-        <label for="student-name">Student Name</label><input id="student-name" name="student-name" required>
-        <br>
-        <label for="student-id">Student ID</label><input id="student-id" name="student-id" required>
-        <br>
-        <!-- the step attribute controls the difference between acceptable 
-        numbers. step="0.1" means that acceptable values are 0, 0.1, 0.2, 0.3 ... -->
-        <label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number" step="0.1" min="0" max="4" required>
-        <br>
-        <button id="add-student">Add Student</button>
-    </form>
-
+    <label for="student-name">Student Name</label><input id="student-name" name="student-name">
+    <br>
+    <label for="student-id">Student ID</label><input id="student-id" name="student-id">
+    <br>
+    <label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number">
+    <br>
+    <button id="add-student">Add Student</button>    
 
     <h2>Student List</h2>
 
