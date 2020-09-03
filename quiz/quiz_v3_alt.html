@@ -18,6 +18,9 @@
     // Select the correct answer button by ID
     let correctAnswerButton = document.querySelector('#correct-answer')
 
+    // Remember the default button background, to reset if color is changed
+    let defaultButtonBackground = correctAnswerButton.style.background 
+
     // Select the result paragraph by ID. This will be used to 
     // display a 'Correct answer!' message when the user clicks the correct button
     let result = document.querySelector('#result')
@@ -29,7 +32,7 @@
       let wrongAnswerButton = wrongAnswerButtons[x]
       wrongAnswerButton.addEventListener('click', function() {
         result.innerHTML = 'Wrong answer, try again?'
-        correctAnswerButton.style.background = 'white'  
+        correctAnswerButton.style.background = defaultButtonBackground  
       })
     }
     
