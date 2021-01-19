@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tabbed Content</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Favorite Foods</h1>
+
+<div id="tabs">
+  <button data-content-id="pizza" class="tab-button">Pizza</button>
+  <button data-content-id="cheesecake" class="tab-button">Cheesecake</button>
+  <button data-content-id="sushi" class="tab-button">Sushi</button>
+</div>
+
+<div id="pizza" class="tab-content">
+
+  <!-- Put as much content as you like inside the tab-content div -->
+  <h2>Pizza is awesome</h2>
+
+  <p>Here's some example content about pizza.</p>
+
+  <img src="pizza.jpg" alt="four slices of pizza being served on a wood board">
+
+  <p>Photo by <a href="https://unsplash.com/@sahand_hoseini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sahand Hoseini</a> on <a href="https://unsplash.com/s/photos/pizza?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+  
+</div>
+
+<div id="cheesecake" class="tab-content">
+  
+  <h2>Cheesecake is delicious</h2>
+
+  <p>Here's some example content about cheesecake.</p>
+
+  <img src="cheesecake.jpg" alt="A slice of cheesecake on a plate">
+
+  <p>Photo by <a href="https://unsplash.com/@kittinskie?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Tina Guina</a> on <a href="https://unsplash.com/s/photos/cheesecake?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+
+</div>
+
+<div id="sushi" class="tab-content">
+  
+  <h2>Sushi is amazing</h2>
+
+  <p>Here's some example content about sushi.</p>
+
+  <img src="sushi.jpg" alt="Sushi plate with chopsticks and soy sauce">
+
+  <p>Photo by <a href="https://unsplash.com/@andrazlazic?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Andraz Lazic</a> on <a href="https://unsplash.com/s/photos/sushi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+
+</div>
+
+<script>
+
+  let buttons = document.querySelectorAll('.tab-button')
+  let tabContents = document.querySelectorAll('.tab-content')
+
+  // Hide all of the tab content divs
+  tabContents.forEach( function(divEl) {
+    divEl.style.display = 'none'
+  }) 
+
+  // Add event listener to each button
+  buttons.forEach( function(buttonEl) {
+    buttonEl.addEventListener('click', function() {
+
+      // Within the function, 'this' refers to the element that generated the event
+      // Can expect it to be one of the button elements 
+
+      // Hide all of the tab content 
+      tabContents.forEach( function(divEl) {
+        divEl.style.display = 'none'
+      }) 
+
+      // What is the data-content-id value for the button clicked?
+      let contentId = this.getAttribute('data-content-id')
+      
+      // select and show the tab content with this id 
+      let tabContent = document.querySelector('#' + contentId)
+      tabContent.style.display = 'block'
+
+      // Remove the 'active' class from the other buttons 
+      buttons.forEach(function(button) {
+        button.classList.remove('active')
+      })
+
+      // Add the 'active' class to the button to change it's style 
+      this.classList.add('active')
+
+    })
+  })
+
+  // Show the first tab, so it's visible when page loads 
+  tabContents[0].style.display = 'block'
+
+  // And make the first button active 
+  buttons[0].classList.add('active')
+
+</script>
+
+</body>
+</html>
