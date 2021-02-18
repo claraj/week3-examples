@@ -10,12 +10,17 @@
     <p><a href="https://opengameart.org/content/sound-effects-sfx030">Sound effect by Jesús Lastra</a>, CC-BY 3.0 License.</p>
 <script>
 
+  // Create a new Audio object
   let audio = new Audio('sound_effect.mp3')
   let soundButton = document.querySelector('#sound-effect')
 
   soundButton.addEventListener('click', function() {
+    // ask it to play
     audio.play()
   })
+
+  // More info on managing sounds, starting, stopping etc
+  // https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 
 </script>
 
