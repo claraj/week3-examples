@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event bubbling vs Capturing</title>
+
+  <style>
+      div {
+          border: 1px black solid;
+          padding: 1em;
+      }
+  </style>
+</head>
+
+<body>
+
+    <h1>Event Bubbling</h1>
+
+    <!-- Event bubbling - often the default - the innermost element event fires first, then the container -->
+    <div id="container">
+        <button id="click-me">Click me!</button>
+    </div>
+
+
+
+    <h1>Event Capturing</h1>
+
+    <!-- Event bubbling - often the default - the innermost element event fires first, then the container -->
+    <div id="container-2">
+        <button id="click-me-2">Click me!</button>
+    </div>
+
+
+
+<script>
+
+    let button = document.querySelector('#click-me')
+    let container = document.querySelector('#container')
+
+    // default is bubbling - inner event fires first, then bubbles up to containing element
+
+    button.addEventListener('click', function() {
+        alert('Button event!')
+    })
+
+    container.addEventListener('click', function() {
+        alert('Div event!')
+    })
+
+    // Note isCapture argument, set to true 
+    
+    let button2 = document.querySelector('#click-me-2')
+    let container2 = document.querySelector('#container-2')
+
+    button2.addEventListener('click', function() {
+        alert('Button event!')
+    }, true)   // <-- isCapture parameter 
+
+    container2.addEventListener('click', function() {
+        alert('Div event!')
+    }, true)  // <-- isCapture parameter 
+
+</script>
+
+</body>
+
+</html>
+
+</script>
+
+</body>
+</html>
