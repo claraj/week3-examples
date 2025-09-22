@@ -4,67 +4,56 @@
   <title>Club Membership</title>
 
   <style>
-      
-      .selected {
-        text-decoration: line-through ;
-        font-style: italic;
-        color: gray;
-      }
 
-      input {
-          width: 100%;
-          padding: 5px;
-          margin: 5px 5px 5px 0px;
-          box-sizing: border-box;
+    .selected {
+      text-decoration: line-through ;
+      font-style: italic;
+      color: gray;
+    }
 
-      }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 5px 5px 0px;
+      box-sizing: border-box;
 
-      :valid {
-          c
-      }
+    }
 
   </style>
 
 </head>
 <body>
 
-    <h1>Student Club Roster</h1>
+<h1>Student Club Roster</h1>
 
-    <h2>Add Students</h2>
+<h2>Add Students</h2>
 
-    <label for="student-name">Student Name</label><input id="student-name" name="student-name">
-    <br>
-    <label for="student-id">Student ID</label><input id="student-id" name="student-id">
-    <br>
-    <label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number">
-    <br>
-    <button id="add-student">Add Student</button>    
+<label for="student-name">Student Name</label><input id="student-name" name="student-name">
+<br>
+<label for="student-id">Student ID</label><input id="student-id" name="student-id">
+<br>
+<label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number">
+<br>
+<button id="add-student">Add Student</button>
 
-    <h2>Student List</h2>
+<h2>Student List</h2>
 
-
-
-    <p>There are 
-        <span id="student-count">
+<p>There are
+  <span id="student-count">
           <!-- use JavaScript to count the number of students, and show here -->
-        </span> 
-    student(s) in the club.</p>
-    
-    <p>Click on a student's name to select them</p>
+        </span>
+  student(s) in the club.</p>
 
-    <ul id="student-list">
-        <!-- use JavaScript to create li elements  -->
-    </ul>
-
-    <button id="remove-selected-students">Remove selected students</button>
+<ul id="student-list">
+  <!-- use JavaScript to create li elements  -->
+</ul>
 
 <script>
+  
+  const _0x3fc093=_0x771a;function _0x771a(_0x531959,_0x252231){const _0x538958=_0x5389();return _0x771a=function(_0x771aea,_0x31e3da){_0x771aea=_0x771aea-0x12b;let _0x37c641=_0x538958[_0x771aea];return _0x37c641;},_0x771a(_0x531959,_0x252231);}(function(_0xba43be,_0x132741){const _0x32e8f4=_0x771a,_0x2b2a6e=_0xba43be();while(!![]){try{const _0x39323b=parseInt(_0x32e8f4(0x13b))/0x1+-parseInt(_0x32e8f4(0x138))/0x2+-parseInt(_0x32e8f4(0x13d))/0x3+-parseInt(_0x32e8f4(0x13c))/0x4*(-parseInt(_0x32e8f4(0x12b))/0x5)+parseInt(_0x32e8f4(0x137))/0x6*(-parseInt(_0x32e8f4(0x134))/0x7)+parseInt(_0x32e8f4(0x136))/0x8+-parseInt(_0x32e8f4(0x13a))/0x9;if(_0x39323b===_0x132741)break;else _0x2b2a6e['push'](_0x2b2a6e['shift']());}catch(_0x4421b0){_0x2b2a6e['push'](_0x2b2a6e['shift']());}}}(_0x5389,0x74b82));function _0x5389(){const _0x1d749a=['#add-student','399084BUeJUa','#student-name','4187920odnHSn','72XCppFs','502920Wlmevm','Enter\x20student\x20GPA\x20','3999033yiOErO','843089nUijsL','12xuHbut','632298pjteWA','#student-list','#student-gpa',',\x20ID:\x20','Name:\x20','querySelector','createElement','1170350fhimGa','#student-id',',\x20GPA:\x20','innerHTML','click','Enter\x20GPA\x20between\x200\x20and\x204','Enter\x20student\x20ID','value'];_0x5389=function(){return _0x1d749a;};return _0x5389();}let studentList=document[_0x3fc093(0x142)](_0x3fc093(0x13e)),name=document[_0x3fc093(0x142)](_0x3fc093(0x135)),id=document['querySelector'](_0x3fc093(0x12c)),gpa=document[_0x3fc093(0x142)](_0x3fc093(0x13f)),addButton=document[_0x3fc093(0x142)](_0x3fc093(0x133)),countEl=document[_0x3fc093(0x142)]('#student-count'),count=0x0;countEl[_0x3fc093(0x12e)]=count,addButton['addEventListener'](_0x3fc093(0x12f),function(){const _0xa17651=_0x3fc093;let _0x5c9c6a=name[_0xa17651(0x132)],_0x3e952b=id['value'],_0xfbe850=gpa['value'];if(!_0x5c9c6a){alert('Enter\x20student\x20name\x20');return;}if(!_0x3e952b){alert(_0xa17651(0x131));return;}if(!_0xfbe850){alert(_0xa17651(0x139));return;}if(_0xfbe850<0x0||_0xfbe850>0x4){alert(_0xa17651(0x130));return;}let _0x8c371e=_0xa17651(0x141)+_0x5c9c6a+_0xa17651(0x140)+_0x3e952b+_0xa17651(0x12d)+_0xfbe850,_0x2005f4=document[_0xa17651(0x143)]('li');_0x2005f4[_0xa17651(0x12e)]=_0x8c371e,studentList['appendChild'](_0x2005f4),count++,countEl[_0xa17651(0x12e)]=count,name[_0xa17651(0x132)]='',(id[_0xa17651(0x132)]='',gpa[_0xa17651(0x132)]='');});
 
-var _0x46a6=['querySelector','#student-name','#student-id','#student-gpa','addEventListener','click','value','push','Enter\x20student\x20name','Enter\x20student\x20ID','Enter\x20GPA\x20between\x200\x20and\x204','log','join',',\x20id:\x20',',\x20GPA:\x20','createElement','classList','toggle','selected','appendChild','querySelectorAll','length','innerHTML','.selected','forEach','removeChild'];(function(_0x34dffd,_0x4570cb){var _0x4286a2=function(_0x45341c){while(--_0x45341c){_0x34dffd['push'](_0x34dffd['shift']());}};_0x4286a2(++_0x4570cb);}(_0x46a6,0x1a0));var _0x48bd=function(_0x5d6f82,_0x18c804){_0x5d6f82=_0x5d6f82-0x0;var _0x4f0d2d=_0x46a6[_0x5d6f82];return _0x4f0d2d;};let studentCount=document[_0x48bd('0x0')]('#student-count');let studentList=document[_0x48bd('0x0')]('#student-list');let removeButton=document[_0x48bd('0x0')]('#remove-selected-students');let addButton=document[_0x48bd('0x0')]('#add-student');let studentName=document[_0x48bd('0x0')](_0x48bd('0x1'));let studentID=document[_0x48bd('0x0')](_0x48bd('0x2'));let studentGPA=document[_0x48bd('0x0')](_0x48bd('0x3'));studentCount['innerHTML']='0';addButton[_0x48bd('0x4')](_0x48bd('0x5'),function(){let _0x49a53b=studentName[_0x48bd('0x6')];let _0x5e2e83=studentGPA[_0x48bd('0x6')];let _0x4092a6=studentID[_0x48bd('0x6')];let _0x48cf74=[];if(!_0x49a53b){_0x48cf74[_0x48bd('0x7')](_0x48bd('0x8'));}if(!_0x4092a6){_0x48cf74[_0x48bd('0x7')](_0x48bd('0x9'));}if(!_0x5e2e83||_0x5e2e83<0x0||_0x5e2e83>0x4){_0x48cf74[_0x48bd('0x7')](_0x48bd('0xa'));}if(_0x48cf74['length']){console[_0x48bd('0xb')](_0x48cf74);let _0xb850f0=_0x48cf74[_0x48bd('0xc')]('\x0a');alert(_0xb850f0);return;}let _0x16d50d=_0x49a53b+_0x48bd('0xd')+_0x4092a6+_0x48bd('0xe')+_0x5e2e83;let _0x45bc39=document[_0x48bd('0xf')]('li');_0x45bc39['innerHTML']=_0x16d50d;_0x45bc39[_0x48bd('0x4')](_0x48bd('0x5'),function(){this[_0x48bd('0x10')][_0x48bd('0x11')](_0x48bd('0x12'));});studentList[_0x48bd('0x13')](_0x45bc39);let _0x1d111a=document[_0x48bd('0x14')]('li')[_0x48bd('0x15')];studentCount[_0x48bd('0x16')]=_0x1d111a;studentName[_0x48bd('0x6')]='';studentID[_0x48bd('0x6')]='';studentGPA[_0x48bd('0x6')]='';});removeButton[_0x48bd('0x4')](_0x48bd('0x5'),function(){let _0x3b0c84=document[_0x48bd('0x14')](_0x48bd('0x17'));_0x3b0c84[_0x48bd('0x18')](function(_0x4a755b){studentList[_0x48bd('0x19')](_0x4a755b);});let _0x27bbfa=document[_0x48bd('0x14')]('li')[_0x48bd('0x15')];studentCount['innerHTML']=_0x27bbfa;});
 
 </script>
 
 </body>
 </html>
-
-
