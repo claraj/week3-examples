@@ -4,87 +4,73 @@
   <title>Club Membership</title>
 
   <style>
-      
-      .selected {
-        text-decoration: line-through ;
-        font-style: italic;
-        color: gray;
-      }
 
-      input {
-          width: 100%;
-          padding: 5px;
-          margin: 5px 5px 5px 0px;
-          box-sizing: border-box;
+    .selected {
+      text-decoration: line-through ;
+      font-style: italic;
+      color: gray;
+    }
 
-      }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 5px 5px 0px;
+      box-sizing: border-box;
+
+    }
 
   </style>
 
 </head>
 <body>
 
-    <h1>Student Club Roster</h1>
+<h1>Student Club Roster</h1>
 
-    <h2>Add Students</h2>
+<h2>Add Students</h2>
 
-    <label for="student-name">Student Name</label><input id="student-name" name="student-name">
-    <br>
-    <label for="student-id">Student ID</label><input id="student-id" name="student-id">
-    <br>
-    <label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number">
-    <br>
-    <button id="add-student">Add Student</button>    
+<label for="student-name">Student Name</label><input id="student-name" name="student-name">
+<br>
+<label for="student-id">Student ID</label><input id="student-id" name="student-id">
+<br>
+<label for="student-gpa">Student GPA</label><input id="student-gpa" name="student-gpa" type="number">
+<br>
+<button id="add-student">Add Student</button>
 
-    <h2>Student List</h2>
+<h2>Student List</h2>
 
-    <p>There are 
-        <span id="student-count">
+<p>There are
+  <span id="student-count">
           <!-- use JavaScript to count the number of students, and show here -->
-        </span> 
-    student(s) in the club.</p>
-    
-    <p>Click on a student's name to select them</p>
+        </span>
+  student(s) in the club.</p>
 
-    <ul id="student-list">
-        <!-- use JavaScript to create li elements  -->
-    </ul>
-
-    <button id="remove-selected-students">Remove selected students</button>
+<ul id="student-list">
+  <!-- use JavaScript to create li elements  -->
+</ul>
 
 <script>
 
+  /* Add the following functionality to this page
 
+  [Note on HTML element notation: span#student-count means the span element with id="student-count" ]
 
-    /* Add the following functionality to this page
+  When the page loads:
+      * Using JavaScript, display 0 in the span#student-count  (1pt)
 
-    [Note on HTML element notation: span#student-count means the span element with id="student-count" ]
+      * Add an event listener so that when button#add-students is clicked:
+          - Read the value from the student-name input, save in a variable. If the name is not entered, show an alert error message and return. (1pt)
+          - Read the value from the student-id input, save in a variable. If the id is not entered, show an alert error message and return. (1pt)
+          - Read the value from the student-gpa input, save in a variable. If the GPA is not entered, or is not in the range 0-4, show an alert error message and return.  (1pt)
+          - Create a new li element (1pt)
+          - Set the innerHTML of the li element to a string containing the student's name, id, and GPA  (1pt)
+              for example "Beyonce Knowles, id: aa1234bb, GPA 3.8"
+              Use a template string to generate this string
+          - Add the new li element to ul#student-list element (1pt)
+          - Clear the values of the three input elements (1pt)
+          - Update the span#student-count value to the new number of students (1pt)
 
-    When the page loads:
-        * Using JavaScript, display 0 in the span#student-count  (1pt)
-    
-        * Add an event listener so that when button#add-students is clicked:
-            - Read the value from the student-name input, save in a variable. If the name is not entered, show an alert error message and return. (1pt)
-            - Read the value from the student-id input, save in a variable. If the id is not entered, show an alert error message and return. (1pt)
-            - Read the value from the student-gpa input, save in a variable. If the GPA is not entered, or is not in the range 0-4, show an alert error message and return.  (1pt)
-            - Create a new li element (1pt)
-            - Set the innerHTML of the li element to a string containing the student's name, id, and GPA  (1pt)
-                for example "Beyonce Knowles, id: aa1234bb, GPA 3.8"
-                Use a template string to generate this string
-            - Add a click event handler to the new li element.  (3pt)
-            - When the li element is clicked, add the class="selected" to that li element.
-            - When that li element is clicked again, remove the class="selected" from that li element
-                In other words, clicking a li element will toggle the selected class. https://www.w3schools.com/howto/howto_js_toggle_class.asp
-            - Add the new li element to ul#student-list element (1pt)
-            - Clear the values of the three input elements (1pt)
-            - Update the span#student-count value to the new number of students (1pt)
-    
-        * Add an event listener so that when button#remove-selected-students is clicked:
-            - Remove all of the elements with the class="selected" from the list.   (3pt)
-            - Using the remove() function on an element will remove it. Example https://jsfiddle.net/rk9pm4vg/
-        
-        You should not need to modify any of the HTML. 
-    */
+      You should not need to modify any of the HTML.
+  */
 
 </script>
 
